@@ -3,7 +3,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const authRoutes = require("./routes/AuthRoute");
 const trainerRoutes = require("./routes/TrainerRoute");
-
+const appointmentRoutes=require("./routes/AppoitmentRoute")
+const db=require("./utils/db")
  const mysql = require("mysql2");
 require("dotenv").config();
 
@@ -17,22 +18,13 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api", trainerRoutes);  
+app.use("/api", appointmentRoutes); 
 
 
 
 
 
 
-
-const ROLE_USER = "USER";
-const ROLE_TRAINER = "TRAINER";
-
-
-
-
-app.get("/roles", (req, res)=>{
-         res.json([ROLE_USER, ROLE_TRAINER])
-     })
 
 
 const PORT = process.env.PORT || 5000;
