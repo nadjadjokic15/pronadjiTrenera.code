@@ -32,15 +32,15 @@
   U folderu **server projekta code**, pokreni server:
    ```bash
    node server.js
-   nodemon server.js
-
+   nodemon server.js 
    ```
 
    ### 2. Pokreni frontend
-    U folderu **pronadjitrenera**, pokreni frontend:
+ U folderu **pronadjitrenera**, pokreni frontend:
    ```bash
    npm run dev
    ```
+   
 
    ### 3. Otvori aplikaciju
    Kad dobiješ localhost na kojem je aplikacija pristisnes **o** i enter i otvoriće se aplikacija u browseru
