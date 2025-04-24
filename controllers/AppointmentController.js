@@ -24,6 +24,9 @@ exports.createAppointment = (req, res) => {
 };
 
 
+
+
+
 exports.getAppointmentsByUserId = (req, res) => {
   const {userId} = req.params;
  
@@ -63,10 +66,10 @@ exports.getAppointmentsByTrainerId = (req, res) => {
 exports.updateStatus = (req, res) => {
   const { appointmentId } = req.params;
   const { status } = req.body; 
-  const userId = req.user.id; 
+  // const userId = req.user.id; 
 
   
-  Appointment.updateAppointmentStatus(appointmentId, userId, status, (err, result) => {
+  Appointment.updateAppointmentStatus(appointmentId,  status, (err, result) => {
     if (err) {
       return res.status(400).send(err.message);
     }
